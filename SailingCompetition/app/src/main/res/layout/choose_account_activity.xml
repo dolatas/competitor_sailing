@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dodo.com.sailingcompetition.ChooseAccount">
+
+    <TextView android:text="@string/choose_account" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/chooseCompetitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/competitor" >
+    </Button>
+    <Button
+        android:id="@+id/chooseCoach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coach" >
+    </Button>
+
+    <TextView android:text="@string/add_account" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/addCompetitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/competitor" >
+    </Button>
+    <Button
+        android:id="@+id/addCoach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coach" >
+    </Button>
+
+</LinearLayout>
