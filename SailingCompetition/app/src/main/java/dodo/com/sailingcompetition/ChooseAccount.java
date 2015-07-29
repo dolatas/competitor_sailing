@@ -45,13 +45,6 @@ public class ChooseAccount extends ActionBarActivity {
         startActivity(intent);
     }
 
-    @Click // When R.id.addCompetitor button is clicked
-    void addBuoy(){
-        Intent intent = new Intent(this, SignUp_.class);
-        intent.putExtra(CHOOSE_ACCOUNT_MESSAGE, "buoy");
-        startActivity(intent);
-    }
-
     //TODO create account class
     private List<Object> getAccountsByUser(User user){
         //TODO get accounts for user
