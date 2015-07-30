@@ -27,16 +27,16 @@ public class Competitions extends ListActivity {
     }
 
 
-    List<Competition> getCompetitions(){
-        //TODO rest WS getCompetition
-        List<Competition> testList = new ArrayList<Competition>();
-
-        for(int i = 0; i < 10; i++){
-            Competition competition = new Competition();
-            competition.setName("Przykładowe zawody " + i);
-            testList.add(competition);
-        }
-
-        return testList;
-    }
+//    List<Competition> getCompetitions(){
+//        //TODO rest WS getCompetition
+//        List<Competition> testList = new ArrayList<Competition>();
+//
+//        for(int i = 0; i < 10; i++){
+//            Competition competition = new Competition();
+//            competition.setName("Przykładowe zawody " + i);
+//            testList.add(competition);
+//        }
+//
+//        return testList;
+//    }
 }

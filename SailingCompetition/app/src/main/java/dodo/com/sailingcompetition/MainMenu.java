@@ -35,7 +35,6 @@ public class MainMenu extends ActionBarActivity {
     @AfterViews
     void initView() {
         Log.i("Sailor", "MainMenu > initView");
-
         competitionList.setAdapter(adapter);
         //TODO
     }

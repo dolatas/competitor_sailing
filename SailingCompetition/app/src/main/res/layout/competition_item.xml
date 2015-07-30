@@ -2,12 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="2015-01-01"
+        android:id="@+id/dateFrom"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="2015-01-01"
+        android:id="@+id/dateTo"
+        android:layout_gravity="center_horizontal" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="test"
-        android:textSize="175dp"
+        android:textSize="20dp"
         android:id="@+id/name"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
