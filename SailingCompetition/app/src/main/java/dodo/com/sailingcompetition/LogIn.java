@@ -39,7 +39,7 @@ public class LogIn extends ActionBarActivity {
 
     @Click // When R.id.logIn button is clicked
     void logIn() {
-        startActivity(new Intent(this, MainMenu_.class));
+        startActivity(new Intent(this, Competitions_.class));
     }
 
     @Click // When R.id.signUp button is clicked

@@ -14,10 +14,10 @@ public class Competitor {
     private String place;
     private String language; //TODO move to settings?
     private String login;
-    private String passsword;
+    private String password;
     private String firstName;
     private String lastName;
-    private String birthDate;
+    private Date birthDate;
     private String sailNo;
     private String clubName;
     private String licenseNo;
@@ -73,12 +73,12 @@ public class Competitor {
         this.login = login;
     }
 
-    public String getPasssword() {
-        return passsword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasssword(String passsword) {
-        this.passsword = passsword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -97,11 +97,11 @@ public class Competitor {
         this.lastName = lastName;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 

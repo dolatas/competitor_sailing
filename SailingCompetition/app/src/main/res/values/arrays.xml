@@ -4,5 +4,9 @@
         <item>Mężczyzna</item>
         <item>Kobieta</item>
     </string-array>
+    <string-array name="country">
+        <item>Polska</item>
+        <item>Inne</item>
+    </string-array>
 
 </resources>

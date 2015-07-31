@@ -16,6 +16,7 @@ import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ItemClick;
+import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.ViewById;
 
 import dodo.com.sailingcompetition.model.Competition;
@@ -24,6 +25,7 @@ import dodo.com.sailingcompetition.utils.CompetitionListAdapter;
 import static android.widget.Toast.makeText;
 
 @EActivity(R.layout.main_menu_activity)
+@OptionsMenu(R.menu.menu_bar)
 public class MainMenu extends ActionBarActivity {
 
     @ViewById
@@ -52,7 +54,10 @@ public class MainMenu extends ActionBarActivity {
 
     @ItemClick
     void competitionListItemClicked(Competition competition) {
-        Toast.makeText(this, competition.getName(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, CompetitionInfo_.class);
+        intent.putExtra("competition", competition);
+        startActivity(intent);
+//        Toast.makeText(this, competition.getName(), Toast.LENGTH_SHORT).show();
     }
 
 

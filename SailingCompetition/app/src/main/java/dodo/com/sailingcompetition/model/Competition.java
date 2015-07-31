@@ -1,5 +1,6 @@
 package dodo.com.sailingcompetition.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import dodo.com.sailingcompetition.dict.CompetitionType;
@@ -7,7 +8,7 @@ import dodo.com.sailingcompetition.dict.CompetitionType;
 /**
  * Created by hp on 2015-05-09.
  */
-public class Competition {
+public class Competition implements Serializable {
     private Long id;
     private CompetitionType competitionType;
     private Long areaId;
