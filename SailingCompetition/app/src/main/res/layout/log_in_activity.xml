@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/log_in"
-        android:background="@drawable/primary_btn"
+        android:background="@drawable/dark_blue_btn"
         style="@style/primary_btn">
     </Button>
     <Button
@@ -42,7 +42,8 @@
         android:id="@+id/signUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up" >
+        android:text="@string/sign_up"
+        android:background="@drawable/light_blue_btn" >
     </Button>
 
 

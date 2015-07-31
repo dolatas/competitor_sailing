@@ -36,7 +36,7 @@ public class CompetitionItemView extends LinearLayout {
     public void bind(Competition competition) {
         name.setText(competition.getName());
         dateFrom.setText(SDF.format(competition.getDateFrom()));
-        dateFrom.setText(SDF.format(competition.getDateTo()));
+        dateTo.setText(SDF.format(competition.getDateTo()));
     }
 
 }
