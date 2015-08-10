@@ -13,7 +13,6 @@ public class Competitor {
     private String clubName;
     private String licenseNo;
     private Date doctorsPem;
-    private String place;
 
     public Long getId() {
         return id;
@@ -53,13 +52,5 @@ public class Competitor {
 
     public void setDoctorsPem(Date doctorsPem) {
         this.doctorsPem = doctorsPem;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
     }
 }

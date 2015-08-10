@@ -1,6 +1,7 @@
 package dodo.com.sailingcompetition;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -33,8 +34,6 @@ public class AddCompetitorAccount extends Fragment {
     EditText licenseNo;
     @ViewById
     EditText doctorsPerm;
-    @ViewById
-    EditText place;
 
     @AfterViews
     void initView() {
@@ -44,15 +43,15 @@ public class AddCompetitorAccount extends Fragment {
     }
 
     @Click
-    void save(){
-        if(validateData()){
+    void save() {
+        if (validateData()) {
             try {
                 Competitor competitor = new Competitor();
                 competitor.setLicenseNo(licenseNo.getText().toString());
                 competitor.setClubName(clubName.getText().toString());
                 competitor.setLicenseNo(licenseNo.getText().toString());
                 competitor.setDoctorsPem(SDF.parse(doctorsPerm.getText().toString()));
-                competitor.setPlace(place.getText().toString());
+                startActivity(new Intent(getActivity(), Competitions_.class));
             } catch (ParseException e) {
                 Log.e("competitor data error", e.getStackTrace().toString());
             }
@@ -60,9 +59,21 @@ public class AddCompetitorAccount extends Fragment {
         }
     }
 
-    private boolean validateData(){
+    private boolean validateData() {
         //TODO validation
         return true;
+    }
+
+
+    @Click
+    void cancel(){
+        startActivity(new Intent(getActivity(), ChooseAccount_.class));
+    }
+
+    @Click
+    void delete(){
+        //TODO
+        startActivity(new Intent(getActivity(), Competitions_.class));
     }
 
 }

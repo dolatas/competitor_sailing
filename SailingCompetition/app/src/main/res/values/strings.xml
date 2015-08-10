@@ -58,6 +58,9 @@
     <string name="buoy">Boja</string>
     <string name="add_account">Dodaj konto</string>
     <string name="choose_account">Wybierz konto</string>
+    <string name="save">Zapisz</string>
+    <string name="delete">Usuń</string>
+    <string name="cancel">Anuluj</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

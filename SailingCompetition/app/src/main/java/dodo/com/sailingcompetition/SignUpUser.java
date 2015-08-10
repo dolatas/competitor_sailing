@@ -41,6 +41,8 @@ public class SignUpUser extends Fragment {
     Spinner gender;
     @ViewById
     Spinner country;
+    @ViewById
+    EditText place;
 
     @AfterViews
     void initView() {
@@ -73,6 +75,7 @@ public class SignUpUser extends Fragment {
                 user.setCountry(country.getSelectedItem().toString());
             }
             user.setBirthDate(SDF.parse(birthDate.getText().toString()));
+            user.setPlace(place.getText().toString());
             startActivity(new Intent(getActivity(), ChooseAccount_.class));
         } catch (ParseException e) {
             Log.e("user data error", e.getStackTrace().toString());
@@ -85,8 +88,13 @@ public class SignUpUser extends Fragment {
     }
 
     @Click
+    void cancel() {
+        startActivity(new Intent(getActivity(), LogIn_.class));
+    }
+
+    @Click
     void delete() {
-        //TODO confirmation popup and delete intead of chooseAccount
+        //TODO confirmation popup and delete instead of chooseAccount
         startActivity(new Intent(getActivity(), ChooseAccount_.class));
     }
 
