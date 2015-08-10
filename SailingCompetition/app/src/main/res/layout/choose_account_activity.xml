@@ -14,16 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:src="@drawable/competitor"
+        android:src="@drawable/competitorw"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/light_blue_btn"/>
+        android:background="@drawable/dark_blue_btn"/>
     <ImageButton
         android:id="@+id/coachBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:src="@drawable/coach"
-        android:background="@drawable/light_blue_btn"/>
+        android:src="@drawable/coachw"
+        android:background="@drawable/dark_blue_btn"/>
 
 
 </LinearLayout>

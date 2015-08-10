@@ -40,6 +40,10 @@
             android:label="@string/title_activity_choose_account" >
         </activity>
         <activity
+            android:name=".AddAccount_"
+            android:label="@string/title_activity_add_account" >
+        </activity>
+        <activity
             android:name=".Competitions_"
             android:label="@string/title_activity_choose_competition" >
         </activity>

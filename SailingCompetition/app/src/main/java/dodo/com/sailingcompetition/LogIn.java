@@ -44,7 +44,7 @@ public class LogIn extends ActionBarActivity {
 
     @Click // When R.id.signUp button is clicked
     void signUp() {
-        startActivity(new Intent(this, ChooseAccount_.class));
+        startActivity(new Intent(this, SignUp_.class));
     }
 
     @Click // When R.id.forgotPassword button is clicked

@@ -1,9 +1,9 @@
 package dodo.com.sailingcompetition;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -14,14 +14,14 @@ import org.androidannotations.annotations.ViewById;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.List;
 
 import dodo.com.sailingcompetition.dict.Gender;
 import dodo.com.sailingcompetition.model.Competitor;
+import dodo.com.sailingcompetition.model.User;
 
 
-@EFragment(R.layout.sign_up_competitor)
-public class SignUpCompetitor extends Fragment {
+@EFragment(R.layout.sign_up_user)
+public class SignUpUser extends Fragment {
 
     private static final SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -36,25 +36,15 @@ public class SignUpCompetitor extends Fragment {
     @ViewById
     EditText lastName;
     @ViewById
-    EditText sailNo;
-    @ViewById
-    EditText clubName;
-    @ViewById
     EditText birthDate;
-    @ViewById
-    EditText licenseNo;
     @ViewById
     Spinner gender;
     @ViewById
-    EditText doctorsPerm;
-    @ViewById
     Spinner country;
-    @ViewById
-    EditText place;
 
     @AfterViews
     void initView() {
-        Log.i("Sailor", "SignUpCompetitor");
+        Log.i("Sailor", "SignUpUser");
 
         //init spinners
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this.getActivity(), R.array.gender, android.R.layout.simple_spinner_item);
@@ -68,32 +58,36 @@ public class SignUpCompetitor extends Fragment {
     }
 
     @Click
-    void save(){
-        if(validateData()){
-            try {
-                Competitor competitor = new Competitor();
-                competitor.setLogin(login.getText().toString());
-                competitor.setEmail(email.getText().toString());
-                competitor.setPassword(password.getText().toString());
-                competitor.setFirstName(firstName.getText().toString());
-                competitor.setLastName(lastName.getText().toString());
-                competitor.setClubName(clubName.getText().toString());
-                competitor.setLicenseNo(licenseNo.getText().toString());
-                competitor.setGender(Gender.valueOf(gender.getSelectedItem().toString()));
-                competitor.setCountry(country.getSelectedItem().toString());
-                competitor.setPlace(place.getText().toString());
-                competitor.setBirthDate(SDF.parse(birthDate.getText().toString()));
-                competitor.setDoctorsPem(SDF.parse(doctorsPerm.getText().toString()));
-            } catch (ParseException e) {
-                Log.e("user data error", e.getStackTrace().toString());
+    void save() {
+        try {
+            //TODO validation
+            User user = new User();
+            user.setLogin(login.getText().toString());
+            user.setEmail(email.getText().toString());
+            user.setPassword(password.getText().toString());
+            user.setFirstName(firstName.getText().toString());
+            user.setLastName(lastName.getText().toString());
+            //TODO
+//                user.setGender(Gender.valueOf(gender.getSelectedItem().toString()));
+            if (country.getSelectedItem() != null) {
+                user.setCountry(country.getSelectedItem().toString());
             }
-
+            user.setBirthDate(SDF.parse(birthDate.getText().toString()));
+            startActivity(new Intent(getActivity(), ChooseAccount_.class));
+        } catch (ParseException e) {
+            Log.e("user data error", e.getStackTrace().toString());
         }
+
     }
 
-    private boolean validateData(){
-        //TODO validation
+    private boolean validateData() {
         return true;
+    }
+
+    @Click
+    void delete() {
+        //TODO confirmation popup and delete intead of chooseAccount
+        startActivity(new Intent(getActivity(), ChooseAccount_.class));
     }
 
 }

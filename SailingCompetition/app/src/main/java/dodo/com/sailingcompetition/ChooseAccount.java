@@ -33,14 +33,14 @@ public class ChooseAccount extends ActionBarActivity {
 
     @Click // When R.id.competitorBtn button is clicked
     void competitorBtn(){
-        Intent intent = new Intent(this, SignUp_.class);
+        Intent intent = new Intent(this, AddAccount_.class);
         intent.putExtra(CHOOSE_ACCOUNT_MESSAGE, "competitor");
         startActivity(intent);
     }
 
     @Click // When R.id.coachBtn button is clicked
     void coachBtn(){
-        Intent intent = new Intent(this, SignUp_.class);
+        Intent intent = new Intent(this, AddAccount_.class);
         intent.putExtra(CHOOSE_ACCOUNT_MESSAGE, "coach");
         startActivity(intent);
     }
