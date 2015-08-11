@@ -31,4 +31,15 @@ public class CompetitionDaoImpl implements CompetitionDao {
 
         return list;
     }
+
+    @Override
+    public Competition getById(Long id) {
+        //TODO
+        Competition c = new Competition();
+        c.setId(id);
+        c.setName("Testowe zawody " + id);
+        c.setDateFrom(new Date());
+        c.setDateTo(new Date());
+        return c;
+    }
 }

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -29,19 +30,31 @@ public class CompetitionInfo extends ActionBarActivity {
     @ViewById
     TextView dateTo;
     @ViewById
-    TextView name;
+    TextView competitionName;
 
     @AfterViews
     void initView() {
         Log.i("Sailor", "CompetitionInfo > initView");
 
         //TODO
-        Intent intent = getIntent();
-        competition = intent.getParcelableExtra("competition");
-        if(competition != null){
-            dateFrom.setText(SDF.format(competition.getDateFrom()));
-            dateTo.setText(SDF.format(competition.getDateTo()));
-            name.setText(competition.getName());
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            competition = (Competition) bundle.getSerializable("competition");
+            if(competition != null){
+                dateFrom.setText(SDF.format(competition.getDateFrom()));
+                dateTo.setText(SDF.format(competition.getDateTo()));
+                competitionName.setText(competition.getName());
+            }
         }
+    }
+
+    @Click
+    void preview() {
+        startActivity(new Intent(this, RaceMap_.class));
+    }
+
+    @Click
+    void race() {
+        startActivity(new Intent(this, RaceInfo_.class));
     }
 }

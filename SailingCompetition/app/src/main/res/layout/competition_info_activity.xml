@@ -38,9 +38,106 @@
 
     </LinearLayout>
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/competitionName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="#competition_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="85dp"
+            android:text="@string/postponement"
+            android:background="@drawable/red_circle_background"
+            style="@style/inside_circle"
+            android:gravity="center_vertical|center_horizontal" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="85dp"
+            android:text="@string/ap_over_a"
+            android:background="@drawable/red_circle_background"
+            style="@style/inside_circle"
+            android:gravity="center_vertical|center_horizontal" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="85dp"
+            android:text="@string/procedure"
+            android:background="@drawable/red_circle_background"
+            style="@style/inside_circle"
+            android:gravity="center_vertical|center_horizontal" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="85dp"
+            android:text="@string/race"
+            android:background="@drawable/red_circle_background"
+            style="@style/inside_circle"
+            android:gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_over_a_down" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_over_a_up" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_up" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ap_down" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/track" />
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#track_name" />
+        <Button
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preview"
+            android:background="@drawable/dark_blue_btn"
+            style="@style/primary_btn">
+        </Button>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/race"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/race"
+        android:background="@drawable/dark_green_btn"
+        style="@style/primary_btn">
+    </Button>
 
 </LinearLayout>

@@ -54,7 +54,9 @@ public class Competitions extends ActionBarActivity {
     @ItemClick
     void competitionListItemClicked(Competition competition) {
         Intent intent = new Intent(this, CompetitionInfo_.class);
-        intent.putExtra("competition", competition);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("competition", competition);
+        intent.putExtras(bundle);
         startActivity(intent);
 //        Toast.makeText(this, competition.getName(), Toast.LENGTH_SHORT).show();
     }

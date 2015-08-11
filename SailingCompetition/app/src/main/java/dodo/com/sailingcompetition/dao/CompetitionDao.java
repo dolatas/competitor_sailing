@@ -10,4 +10,5 @@ import dodo.com.sailingcompetition.model.Competition;
 
 public interface CompetitionDao  {
     List<Competition> findAll();
+    Competition getById(Long id);
 }

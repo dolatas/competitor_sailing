@@ -2,28 +2,41 @@ package dodo.com.sailingcompetition;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+
+@EActivity(R.layout.race_info_activity)
 public class RaceMap extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.race_map_activity);
+    @AfterViews
+    void initView() {
+        Log.i("Sailor", "RaceMap > initView");
+
         setUpMapIfNeeded();
+        //TODO
+
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setUpMapIfNeeded();
-    }
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.race_map_activity);
+//        setUpMapIfNeeded();
+//    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        setUpMapIfNeeded();
+//    }
 
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly

@@ -36,6 +36,10 @@
             android:label="@string/title_activity_race_info" >
         </activity>
         <activity
+            android:name=".RaceMap_"
+            android:label="@string/title_activity_race_map" >
+        </activity>
+        <activity
             android:name=".ChooseAccount_"
             android:label="@string/title_activity_choose_account" >
         </activity>
