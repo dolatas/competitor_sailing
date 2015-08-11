@@ -49,12 +49,12 @@ public class CompetitionInfo extends ActionBarActivity {
     }
 
     @Click
-    void preview() {
+    void previewBtn() {
         startActivity(new Intent(this, RaceMap_.class));
     }
 
     @Click
-    void race() {
+    void raceBtn() {
         startActivity(new Intent(this, RaceInfo_.class));
     }
 }
