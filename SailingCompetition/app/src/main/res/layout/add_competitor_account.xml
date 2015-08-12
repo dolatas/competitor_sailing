@@ -20,20 +20,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/save"
-                android:background="@drawable/dark_blue_btn"
-                style="@style/primary_btn"></Button>
+                android:background="@drawable/btn_primary"
+                style="@style/btn_text"></Button>
 
             <Button
                 android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cancel"></Button>
+                android:text="@string/cancel"
+                android:background="@drawable/btn_default"
+                style="@style/btn_text"></Button>
 
             <Button
                 android:id="@+id/delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/delete"></Button>
+                android:text="@string/delete"
+                android:background="@drawable/btn_danger"
+                style="@style/btn_text"></Button>
 
         </LinearLayout>
 

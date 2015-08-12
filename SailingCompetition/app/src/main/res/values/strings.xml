@@ -61,6 +61,8 @@
     <string name="save">Zapisz</string>
     <string name="delete">Usuń</string>
     <string name="cancel">Anuluj</string>
+    <string name="claim_protest">Zgłoś protest</string>
+    <string name="call_for_help">Wezwij pomoc</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

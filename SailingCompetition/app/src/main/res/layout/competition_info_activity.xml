@@ -8,30 +8,33 @@
     android:orientation="vertical"
     tools:context="dodo.com.sailingcompetition.CompetitionInfo">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp">
+        android:orientation="horizontal">
 
         <TextView
+            style="@style/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:textSize="10dp"
+            android:textSize="12dp"
+            android:textStyle="normal"
             android:drawablePadding="5dp"
+            android:paddingBottom="0dp"
             android:drawableLeft="@drawable/datetime"
             android:text="2015-01-01"
             android:id="@+id/dateFrom"
             android:layout_gravity="center_horizontal" />
         <TextView
+            style="@style/label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_toRightOf="@+id/dateFrom"
             android:layout_marginLeft="15dp"
             android:drawablePadding="5dp"
+            android:paddingBottom="0dp"
             android:drawableLeft="@drawable/datetime"
-            android:textSize="10dp"
+            android:textSize="12dp"
+            android:textStyle="normal"
             android:text="2015-01-01"
             android:id="@+id/dateTo"
             android:layout_gravity="center_horizontal" />
@@ -39,8 +42,12 @@
     </LinearLayout>
     <TextView
         android:id="@+id/competitionName"
-        android:layout_width="wrap_content"
+        style="@style/label"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:paddingTop="0dp"
+        android:gravity="center"
         android:text="#competition_name" />
 
     <LinearLayout
@@ -128,21 +135,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/activity" />
-        <TextView
-            android:id="@+id/activity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="#activity" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
+            style="@style/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/track" />
@@ -156,8 +149,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/preview"
-            android:background="@drawable/dark_blue_btn"
-            style="@style/primary_btn">
+            android:background="@drawable/btn_default"
+            android:minHeight="0dp"
+            android:padding="8dp"
+            style="@style/btn_text">
         </Button>
     </LinearLayout>
 
@@ -171,6 +166,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/procedure" />
@@ -186,6 +182,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/race" />
@@ -207,6 +204,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/wind" />
@@ -222,6 +220,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                style="@style/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hour" />
@@ -232,14 +231,33 @@
                 android:text="#windTime" />
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
+        <TextView
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info" />
+
+        <ListView
+            android:id="@+id/infoList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
     <Button
+        android:layout_weight="0"
         android:id="@+id/raceBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/race"
-        android:background="@drawable/dark_green_btn"
-        style="@style/primary_btn">
+        android:background="@drawable/btn_success"
+        style="@style/btn_text">
     </Button>
 
 </LinearLayout>

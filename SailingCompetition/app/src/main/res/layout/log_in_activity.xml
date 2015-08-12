@@ -29,21 +29,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/log_in"
-        android:background="@drawable/dark_blue_btn"
-        style="@style/primary_btn">
+        android:background="@drawable/btn_primary"
+        style="@style/btn_text">
     </Button>
     <Button
         android:id="@+id/forgotPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_password" >
+        android:text="@string/forgot_password"
+        android:background="@drawable/btn_default"
+        style="@style/btn_text">
     </Button>
     <Button
         android:id="@+id/signUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
-        android:background="@drawable/light_blue_btn" >
+        android:background="@drawable/btn_success"
+        style="@style/btn_text">
     </Button>
 
 
