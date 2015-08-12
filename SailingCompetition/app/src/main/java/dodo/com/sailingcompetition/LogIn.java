@@ -20,7 +20,7 @@ public class LogIn extends ActionBarActivity {
     EditText password;
 
     @AfterViews
-    void updateTextWithDate() {
+    void initView() {
         Log.i("Sailor", "test");
         login.setText("test");
 

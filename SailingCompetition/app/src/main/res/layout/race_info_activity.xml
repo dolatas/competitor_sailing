@@ -148,7 +148,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:orientation="horizontal">
 
         <TextView
@@ -196,7 +195,7 @@
             android:format24Hour="kk:mm:ss"
             android:gravity="center"
             android:textStyle="bold"
-            android:textSize="80dp" />
+            android:textSize="60dp"/>
     </LinearLayout>
 
     <LinearLayout
