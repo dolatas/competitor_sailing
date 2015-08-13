@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp">
+    android:orientation="vertical"
+    android:paddingRight="10dp">
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:textSize="10dp"
-        android:drawablePadding="5dp"
-        android:drawableLeft="@drawable/datetime"
-        android:text="2015-01-01"
-        android:id="@+id/dateFrom"
-        android:layout_gravity="center_horizontal" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_toRightOf="@+id/dateFrom"
-        android:layout_marginLeft="15dp"
-        android:drawablePadding="5dp"
-        android:drawableLeft="@drawable/datetime"
-        android:textSize="10dp"
-        android:text="2015-01-01"
+        <TextView
+            android:id="@+id/dateFrom"
+            style="@style/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/datetime"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="2015-01-01" />
 
-        android:id="@+id/dateTo"
-        android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/dateTo"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/dateFrom"
+            android:drawableLeft="@drawable/datetime"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="2015-01-01" />
 
     </RelativeLayout>
+
     <TextView
+        android:id="@+id/name"
+        style="@style/label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test"
-        android:textSize="20dp"
-        android:id="@+id/name"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="0dp"
+        android:text="#competition_name"
+        android:textSize="22dp" />
 </LinearLayout>

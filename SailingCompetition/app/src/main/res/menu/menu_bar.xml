@@ -5,10 +5,10 @@
         android:id="@+id/refresh"
         android:orderInCategory="100"
         android:icon="@drawable/ic_refresh"
-        android:title="Refresh"/>
+        android:title="@string/action_refresh"/>
     <item
         android:id="@+id/action_settings"
-        android:title="Settings">
+        android:title="@string/action_settings">
     </item>
 
 </menu>

@@ -2,7 +2,8 @@
     <string name="app_name">SailingCompetition</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="action_refresh">Odśwież</string>
 
 
     <string name="log_in">Zaloguj</string>
@@ -71,7 +72,7 @@
     <string name="title_activity_race_info">RaceInfo</string>
     <string name="title_activity_choose_account">ChooseAccount</string>
     <string name="title_activity_add_account">AddAccount</string>
-    <string name="title_activity_choose_competition">ChooseCompetition</string>
+    <string name="title_activity_choose_competition">Zawody</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_main_menu">MainMenu</string>
     <string name="title_activity_race_map">Map</string>

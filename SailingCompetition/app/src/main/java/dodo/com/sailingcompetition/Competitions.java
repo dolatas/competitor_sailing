@@ -25,6 +25,7 @@ import dodo.com.sailingcompetition.utils.CompetitionListAdapter;
 import static android.widget.Toast.makeText;
 
 @EActivity(R.layout.competitions_activity)
+@OptionsMenu(R.menu.menu_competitions)
 public class Competitions extends ActionBarActivity {
 
     @ViewById
@@ -35,18 +36,13 @@ public class Competitions extends ActionBarActivity {
 
     @AfterViews
     void initView() {
-        Log.i("Sailor", "MainMenu > initView");
+        Log.i("Sailor", "Competitions > initView");
         competitionList.setAdapter(adapter);
         //TODO
     }
 
     @Click
-    void competitions() {
-        startActivity(new Intent(this, Competitions_.class));
-    }
-
-    @Click
-    void settings() {
+    void action_settings() {
         startActivity(new Intent(this, Settings_.class));
     }
 
