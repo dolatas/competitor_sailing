@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dododev.sailingcompetition" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LogIn_"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUp_"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name=".RaceInfo_"
+            android:label="@string/title_activity_race_info" >
+        </activity>
+        <activity
+            android:name=".RaceMap_"
+            android:label="@string/title_activity_race_map" >
+        </activity>
+        <activity
+            android:name=".ChooseAccount_"
+            android:label="@string/title_activity_choose_account" >
+        </activity>
+        <activity
+            android:name=".AddAccount_"
+            android:label="@string/title_activity_add_account" >
+        </activity>
+        <activity
+            android:name=".Competitions_"
+            android:label="@string/title_activity_choose_competition" >
+        </activity>
+        <activity
+            android:name=".Settings_"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".MainMenu_"
+            android:label="@string/title_activity_main_menu" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".RaceMap"
+            android:label="@string/title_activity_race_map" >
+        </activity>
+        <activity
+            android:name=".CompetitionInfo_"
+            android:label="@string/title_activity_competition_info" >
+        </activity>
+    </application>
+
+</manifest>
