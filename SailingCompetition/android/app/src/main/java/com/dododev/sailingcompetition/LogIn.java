@@ -50,6 +50,7 @@ public class LogIn extends ActionBarActivity {
     @Click // When R.id.forgotPassword button is clicked
     void forgotPassword() {
         Toast.makeText(getApplicationContext(), "TODO: forgot password btn clicked", Toast.LENGTH_LONG);
+        startActivity(new Intent(this, MainActivity.class));
     }
 
 
