@@ -4,16 +4,25 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import com.dododev.sailingcompetition.dict.Gender;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 /**
  * Created by hp on 2015-03-16.
  */
+@DatabaseTable(tableName = "tb_competitor")
 public class Competitor implements Serializable{
+	private static final long serialVersionUID = -9004382836775746915L;
+	
+	@DatabaseField(generatedId = true, columnName = "id")
     private Long id;
+    @DatabaseField(columnName = "sail_no")
     private String sailNo;
+    @DatabaseField(columnName = "club_name")
     private String clubName;
+    @DatabaseField(columnName = "license_no")
     private String licenseNo;
+    @DatabaseField(columnName = "doctors_perm")
     private Date doctorsPem;
     private List<SubCompetition> subCompetitions;
 

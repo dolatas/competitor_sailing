@@ -1,14 +1,13 @@
 package com.dododev.sailingcompetition.model;
 
-import com.dododev.sailingcompetition.dict.DisciplineType;
+import java.io.Serializable;
 
 /**
- * Created by hp on 2015-05-17.
+ * Created by dodo on 2015-08-20.
  */
-public class Discipline {
+public class Place implements Serializable {
     private Long id;
     private String name;
-    private DisciplineType type;
 
     public Long getId() {
         return id;
@@ -24,13 +23,5 @@ public class Discipline {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public DisciplineType getType() {
-        return type;
-    }
-
-    public void setType(DisciplineType type) {
-        this.type = type;
     }
 }

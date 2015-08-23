@@ -15,9 +15,18 @@ http://cxf.apache.org/schemas/jaxrs.xsd">
     <bean class="org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer"/>
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
     
+    <bean class="com.dododev.sailingcompetition.utils.DBConnection"/>
+    <bean class="com.dododev.sailingcompetition.dao.impl.CompetitionDaoImpl" />
+    <bean class="com.dododev.sailingcompetition.dao.impl.CompetitorDaoImpl" />
+    
+    <bean class="com.dododev.sailingcompetition.ws.CompetitionWS"/>
+    <bean class="com.dododev.sailingcompetition.ws.CompetitorWS"/>
+    
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
-   			 <bean class="com.dododev.sailingcompetition.GcmSender"/>
+        	<bean class="com.dododev.sailingcompetition.ws.proxy.CompetitionWSProxy" />
+        	<bean class="com.dododev.sailingcompetition.ws.proxy.CompetitorWSProxy" />
+   			<bean class="com.dododev.sailingcompetition.GcmSender"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
