@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class Race implements Serializable{
     private Long id;
-    private SubCompetition subCompetition;
+    private SubDisciplineCompetition subCompetition;
     private Coach referee;
     private Track track;
 
@@ -22,11 +22,11 @@ public class Race implements Serializable{
         this.id = id;
     }
 
-    public SubCompetition getSubCompetition() {
+    public SubDisciplineCompetition getSubCompetition() {
         return subCompetition;
     }
 
-    public void setSubCompetition(SubCompetition subCompetition) {
+    public void setSubCompetition(SubDisciplineCompetition subCompetition) {
         this.subCompetition = subCompetition;
     }
 

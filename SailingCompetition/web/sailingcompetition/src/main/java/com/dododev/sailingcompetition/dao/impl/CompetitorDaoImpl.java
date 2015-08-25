@@ -11,8 +11,6 @@ import com.dododev.sailingcompetition.dao.CompetitorDao;
 import com.dododev.sailingcompetition.model.Competition;
 import com.dododev.sailingcompetition.model.Competitor;
 import com.dododev.sailingcompetition.utils.DBConnection;
-import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.dao.DaoManager;
 
 public class CompetitorDaoImpl implements CompetitorDao{
 

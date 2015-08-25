@@ -2,6 +2,7 @@ package com.dododev.sailingcompetition.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by dodo on 2015-08-20.
@@ -9,6 +10,7 @@ import java.util.Date;
 public class SubCompetition implements Serializable{
     private Long id;
     private Competition competition;
+    private List<Competitor> competitors;
     private SubDiscipline subDiscipline;
     private Integer maxRaces;
     private Double fee;
@@ -30,6 +32,14 @@ public class SubCompetition implements Serializable{
 
     public void setCompetition(Competition competition) {
         this.competition = competition;
+    }
+
+    public List<Competitor> getCompetitors() {
+        return competitors;
+    }
+
+    public void setCompetitors(List<Competitor> competitors) {
+        this.competitors = competitors;
     }
 
     public SubDiscipline getSubDiscipline() {
