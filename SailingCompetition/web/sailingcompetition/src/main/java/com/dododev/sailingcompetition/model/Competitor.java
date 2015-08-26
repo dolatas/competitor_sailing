@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -104,6 +105,7 @@ public class Competitor extends BaseObject implements Serializable{
 		this.competitions = competitions;
 	}
 
+    @OneToOne
 	public User getUser() {
 		return user;
 	}

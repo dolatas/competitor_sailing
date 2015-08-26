@@ -3,6 +3,7 @@ package com.dododev.sailingcompetition.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,6 +11,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -74,7 +78,9 @@ public class User extends BaseObject implements Serializable{
     public void setCountry(String country) {
         this.country = country;
     }
-
+    
+	@ManyToOne
+	@JoinColumn(name = "place_id")
     public Place getPlace() {
         return place;
     }
@@ -146,6 +152,7 @@ public class User extends BaseObject implements Serializable{
         this.phone = phone;
     }
 
+	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     public Competitor getCompetitorAccount() {
         return competitorAccount;
     }
@@ -154,6 +161,7 @@ public class User extends BaseObject implements Serializable{
         this.competitorAccount = competitorAccount;
     }
 
+	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     public Coach getCoachAccount() {
         return coachAccount;
     }

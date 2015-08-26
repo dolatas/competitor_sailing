@@ -1,12 +1,15 @@
 package com.dododev.sailingcompetition.model;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -25,6 +28,8 @@ public class Place extends BaseObject implements Serializable {
 	private static final long serialVersionUID = 7783768951241908031L;
 	private Long id;
     private String name;
+    private List<Competition> competitions;
+    private List<User> users;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_place")
@@ -46,6 +51,24 @@ public class Place extends BaseObject implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "competition")
+    public List<Competition> getCompetitions() {
+		return competitions;
+	}
+    
+    public void setCompetitions(List<Competition> competitions) {
+		this.competitions = competitions;
+	}
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "competition")
+    public List<User> getUsers() {
+		return users;
+	}
+    
+    public void setUsers(List<User> users) {
+		this.users = users;
+	}
 
 	@Override
 	public String toString() {

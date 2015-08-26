@@ -3,6 +3,7 @@ package com.dododev.sailingcompetition.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -29,7 +32,9 @@ public class Coach extends BaseObject implements Serializable{
 	
 	private Long id;
     private String licenseNo;
+    private User user;
     private List<Competition> competitions;
+    private List<Race> races;
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_coach")
@@ -52,6 +57,15 @@ public class Coach extends BaseObject implements Serializable{
         this.licenseNo = licenseNo;
     }
 
+    @OneToOne
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "referees")
     public List<Competition> getCompetitions() {
         return competitions;
@@ -61,6 +75,15 @@ public class Coach extends BaseObject implements Serializable{
         this.competitions = competitions;
     }
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "race")
+    public List<Race> getRaces() {
+		return races;
+	}
+    
+    public void setRaces(List<Race> races) {
+		this.races = races;
+	}
+    
 	@Override
 	public String toString() {
 		return "Coach[ id: " + id + ", licenseNo: " + licenseNo + " ]";

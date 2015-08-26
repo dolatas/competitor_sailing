@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
@@ -51,7 +52,7 @@ public class Competition extends BaseObject implements Serializable {
     private List<Coach> referees;
     private List<Document> documents;
     private List<Competitor> competitors;
-    private List<SubDisciplineCompetition> subCompetitions;
+    private List<SubDisciplineCompetition> subDisciplineCompetitions;
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_competition")
@@ -93,6 +94,8 @@ public class Competition extends BaseObject implements Serializable {
         this.discipline = discipline;
     }
 
+	@ManyToOne
+	@JoinColumn(name = "place_id")
     public Place getPlace() {
         return place;
     }
@@ -187,12 +190,12 @@ public class Competition extends BaseObject implements Serializable {
 	}
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "competition")
-    public List<SubDisciplineCompetition> getSubCompetitions() {
-        return subCompetitions;
+    public List<SubDisciplineCompetition> getSubDisciplineCompetitions() {
+        return subDisciplineCompetitions;
     }
 
-    public void setSubCompetitions(List<SubDisciplineCompetition> subCompetitions) {
-        this.subCompetitions = subCompetitions;
+    public void setSubDisciplineCompetitions(List<SubDisciplineCompetition> subDisciplineCompetitions) {
+        this.subDisciplineCompetitions = subDisciplineCompetitions;
     }
 
 	@Override

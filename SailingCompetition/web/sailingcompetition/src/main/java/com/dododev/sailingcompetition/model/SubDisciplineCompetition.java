@@ -15,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -42,6 +43,7 @@ public class SubDisciplineCompetition extends BaseObject implements Serializable
 	private Competition competition;
 	private SubDiscipline subDiscipline;
 	private List<Competitor> competitors;
+	private List<Race> races;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_sub_discipline_competition")
@@ -137,6 +139,15 @@ public class SubDisciplineCompetition extends BaseObject implements Serializable
 
 	public void setCompetitors(List<Competitor> competitors) {
 		this.competitors = competitors;
+	}
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "subDisciplineCompetition")
+	public List<Race> getRaces() {
+		return races;
+	}
+	
+	public void setRaces(List<Race> races) {
+		this.races = races;
 	}
 
 	@Override

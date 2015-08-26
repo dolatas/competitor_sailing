@@ -4,10 +4,12 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -33,6 +35,7 @@ public class Track extends BaseObject implements Serializable {
     private Integer finish1;
     private Integer finish2;
     private byte[] photo;
+    private Race race;
 
     @Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_track")
@@ -109,6 +112,15 @@ public class Track extends BaseObject implements Serializable {
     public void setPhoto(byte[] photo) {
         this.photo = photo;
     }
+
+    @OneToOne(fetch = FetchType.LAZY)
+    public Race getRace() {
+		return race;
+	}
+    
+    public void setRace(Race race) {
+		this.race = race;
+	}
 
 	@Override
 	public String toString() {
