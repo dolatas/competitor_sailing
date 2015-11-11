@@ -1,4 +1,4 @@
-package com.dododev.sailingcompetition.rest;
+package com.dododev.sailingcompetition.controller;
 
 import java.io.IOException;
 
